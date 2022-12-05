@@ -13,8 +13,9 @@ def load_data():
 
 df = load_data()
 
-for i, row in df.iterrows():
-  st.write(row)
-  
-  with st.spinner("Simulating real-time data..."):
-    sleep(1)
+with st.container():
+  for i, row in df.iterrows():
+    st.write(row)
+
+    with st.spinner("Simulating real-time data..."):
+      sleep(1)
